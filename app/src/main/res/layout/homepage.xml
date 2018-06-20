@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fcc">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.youth.banner.Banner
+            android:id="@+id/banner"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/sao_iv"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/a_s" />
+
+            <LinearLayout
+                android:id="@+id/sou_sou"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:background="@drawable/shape_search">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="周大福礼包大放送"/>
+            </LinearLayout>
+            <ImageView
+                android:id="@+id/img_xunfei"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/root"
+                />
+            <ImageView
+                android:id="@+id/msg_iv"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/my_msg_bai" />
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/jiu_rlv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/banner"
+            android:layout_margin="5dp"></android.support.v7.widget.RecyclerView>
+
+        <LinearLayout
+            android:id="@+id/miao_sha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/jiu_rlv"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tv_miaosha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="京东秒杀"
+                    android:textColor="#f00"
+                    android:textSize="25dp" />
+
+                <TextView
+                    android:id="@+id/tv_miaosha_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="10点场"
+                    android:textSize="25dp" />
+
+                <TextView
+                    android:id="@+id/tv_miaosha_shi"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/shape_miaosha_time"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textColor="#fff"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="3dp"
+                    android:text=":" />
+
+                <TextView
+                    android:id="@+id/tv_miaosha_minter"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/shape_miaosha_time"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textColor="#fff"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="3dp"
+                    android:text=":" />
+
+                <TextView
+                    android:id="@+id/tv_miaosha_second"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/shape_miaosha_time"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textColor="#fff"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/miaosha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"></android.support.v7.widget.RecyclerView>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tui_jian"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="为你推荐"
+            android:textSize="30dp"
+            android:gravity="center"
+            android:layout_below="@+id/miao_sha"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            />
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/tuijian"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tui_jian"
+            ></android.support.v7.widget.RecyclerView>
+    </RelativeLayout>
+
+</ScrollView>
